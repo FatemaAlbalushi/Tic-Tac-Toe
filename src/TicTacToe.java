@@ -48,7 +48,7 @@ public class TicTacToe {
 			System.out.println("Make a move, Enter a position: ");
 			System.out.println("-------------------");
 			char position = input.next().charAt(0);
-			
+		
 			//Checking 
 				for(int i =0;i<arr.length;i++) 
 				{
@@ -78,22 +78,26 @@ public class TicTacToe {
 					if (arr[i][0]=='X' && arr[i][1]=='X' && arr[i][2]=='X')
 					{
 						System.out.println("Player with symbol X win");
+						break;
 					}
 					else if (arr[i][0]=='O' && arr[i][1]=='O' && arr[i][2]=='O')
 					{ 
 						System.out.println("Player with symbol O win");
+						break;
 					}
 				}
 				
 				for(int j =0;j<=2;j++) 
 				{
-					if (arr[j][0]=='X' && arr[j][1]=='X' && arr[j][2]=='X')
+					if (arr[0][j]=='X' && arr[1][j]=='X' && arr[2][j]=='X')
 					{
 						System.out.println("Player with symbol X win");
+						break;
 					}
-					else if (arr[j][0]=='O' && arr[j][1]=='O' && arr[j][2]=='O')
+					else if (arr[0][j]=='O' && arr[1][j]=='O' && arr[2][j]=='O')
 					{ 
 						System.out.println("Player with symbol O win");
+						break;
 					}
 				}	
 		}	
