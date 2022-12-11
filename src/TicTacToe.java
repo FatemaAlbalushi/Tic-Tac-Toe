@@ -21,13 +21,16 @@ public class TicTacToe {
 				{'7','8','9'}};
 		Scanner input = new Scanner(System.in);
 		char turn = 'X';
+		boolean play=true;
 		
 		System.out.println("Wellcome to Tic-Tac-Toe Program");
 
 		
 		
 		
-		for(int x =1;x<9;x++) {
+			
+	
+		for(int x =0;x<9;x++) {
 			
 			for(int i =0;i<arr.length;i++) 
 			{
@@ -61,47 +64,75 @@ public class TicTacToe {
 							{    
 			                    arr[i][j]='X';
 			                    turn ='O';
+			                  //ً Who is the winner
+			    				for(i =0;i<=2;i++) 
+			    				{
+			    					if (arr[i][0]=='X' && arr[i][1]=='X' && arr[i][2]=='X')
+			    					{
+			    						
+			    						System.out.println("Player with symbol X win");
+			    						System.exit(0);
+			    					}
+			    					
+			    				}
+			    				
+			    				for(j =0;j<=2;j++) 
+			    				{
+			    					if (arr[0][j]=='X' && arr[1][j]=='X' && arr[2][j]=='X')
+			    					{
+			    						
+			    						System.out.println("Player with symbol X win");
+			    						System.exit(0);
+			    						
+			    					}
+			    					
+			    				}	
+			    				if(arr[0][0]=='X' && arr[1][1]=='X' && arr[2][2]=='X') 
+								{
+									System.out.println("Player with symbol X win");
+									System.exit(0);
+								}
 			                }
 			                else
 			                {
 			                	 arr[i][j]='O';
 								 turn = 'X';
+								//ً Who is the winner
+									for(i =0;i<=2;i++) 
+									{
+										
+										 if (arr[i][0]=='O' && arr[i][1]=='O' && arr[i][2]=='O')
+										{ 
+											System.out.println("Player with symbol O win");
+											
+											System.exit(0);
+											
+										}
+									}
+									
+									for(j =0;j<=2;j++) 
+									{
+										
+										if (arr[0][j]=='O' && arr[1][j]=='O' && arr[2][j]=='O')
+										{ 
+											System.out.println("Player with symbol O win");
+											System.exit(0);
+										}
+									}	
+									if(arr[0][0]=='O' && arr[1][1]=='O' && arr[2][2]=='O') 
+									{
+										System.out.println("Player with symbol O win");
+										System.exit(0);
+									}
 			                }
 						}
 							
 					}		
 				}
-				
-				//ً Who is the winner
-				for(int i =0;i<=2;i++) 
-				{
-					if (arr[i][0]=='X' && arr[i][1]=='X' && arr[i][2]=='X')
-					{
-						System.out.println("Player with symbol X win");
-						break;
-					}
-					else if (arr[i][0]=='O' && arr[i][1]=='O' && arr[i][2]=='O')
-					{ 
-						System.out.println("Player with symbol O win");
-						break;
-					}
-				}
-				
-				for(int j =0;j<=2;j++) 
-				{
-					if (arr[0][j]=='X' && arr[1][j]=='X' && arr[2][j]=='X')
-					{
-						System.out.println("Player with symbol X win");
-						break;
-					}
-					else if (arr[0][j]=='O' && arr[1][j]=='O' && arr[2][j]=='O')
-					{ 
-						System.out.println("Player with symbol O win");
-						break;
-					}
-				}	
+					
 		}	
 
 	}
 
 }
+
