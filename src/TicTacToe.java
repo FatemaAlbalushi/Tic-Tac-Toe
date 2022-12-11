@@ -97,6 +97,11 @@ public class TicTacToe {
 								System.out.println("Player with symbol X win");
 								System.exit(0);
 							}
+			    			if(arr[0][2]=='X' && arr[1][1]=='X' && arr[2][0]=='X') 
+							{
+										System.out.println("Player with symbol X win");
+										System.exit(0);
+							}
 			           }
 			            
 					  else
@@ -136,6 +141,11 @@ public class TicTacToe {
 								}
 							}	
 							if(arr[0][0]=='O' && arr[1][1]=='O' && arr[2][2]=='O') 
+							{
+										System.out.println("Player with symbol O win");
+										System.exit(0);
+							}
+							if(arr[0][2]=='O' && arr[1][1]=='O' && arr[2][0]=='O') 
 							{
 										System.out.println("Player with symbol O win");
 										System.exit(0);
