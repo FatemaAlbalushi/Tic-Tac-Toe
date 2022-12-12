@@ -40,8 +40,11 @@ public class TicTacToeMain {
 			System.out.println("-------------------");
 			char position = input.next().charAt(0);
 			
-			if 
-			
+			if (position>9) 
+			{
+				System.out.println("");
+			}
+			break;
 		}
 		
 		
