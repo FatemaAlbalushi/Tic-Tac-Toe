@@ -32,6 +32,19 @@ public class TicTacToeMain {
 	
 		display(arr);
 		
+		while (true)
+		{
+			System.out.println("Player 1 Symbol: X");
+			System.out.println("Player 2 Symbol: O");
+			System.out.println("Make a move, Enter a position: ");
+			System.out.println("-------------------");
+			char position = input.next().charAt(0);
+			
+			if 
+			
+		}
+		
+		
 		if ( iswin(arr)=='X') 
 		{
 			System.out.println("Player with symbol O win");
@@ -59,6 +72,7 @@ public class TicTacToeMain {
 		}
 		
 	}
+	display(arr);
 	}
 	
 	public static void display(char[][] arr) 

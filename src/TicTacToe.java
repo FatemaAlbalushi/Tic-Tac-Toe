@@ -5,13 +5,13 @@ import java.util.Scanner;
  */
 
 /**
- * @author LAP-10
+ * This program is used to open TicTacToe game
  *
  */
 public class TicTacToe {
 
 	/**
-	 * @param args
+	 * The main 
 	 */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -26,10 +26,10 @@ public class TicTacToe {
 		System.out.println("Wellcome to Tic-Tac-Toe Program");
 
 			
-	
+		//
 		for(int x =0;x<9;x++) 
 		{
-			
+			//Display the board
 			for(int i =0;i<arr.length;i++) 
 			{
 				for(int j =0;j<arr[i].length; j++) 
@@ -50,7 +50,7 @@ public class TicTacToe {
 			System.out.println("-------------------");
 			char position = input.next().charAt(0);
 		
-			//Checking 
+			// replace the position with user symbol 
 			for(int i =0;i<arr.length;i++) 
 			{
 				for(int j =0;j<arr.length; j++) 
@@ -58,21 +58,24 @@ public class TicTacToe {
 						
 					 if(position==arr[i][j] )  
 					 {
-							 
+						// player 1 move	 
 						if (turn=='X') 
 						{   
+							//if the index already has been used
 							if( arr[i][j]=='X' || arr[i][j]=='O') 
 							{
 								System.out.println("Error");
 								System.exit(0);
 				                    
 							}
+							// put the symbol in the index and change the turn
 							else 
 							{
 							    arr[i][j]='X';
 				                turn ='O';
 							}
-			                //ً Who is the winner
+			                //ً The winner is X
+							//check by raw
 			    			for(i =0;i<=2;i++) 
 			    			{
 			    				if (arr[i][0]=='X' && arr[i][1]=='X' && arr[i][2]=='X')
@@ -82,7 +85,7 @@ public class TicTacToe {
 			    				}
 			    					
 			    			}
-			    				
+			    			//check by col	
 			    			for(j =0;j<=2;j++) 
 			    			{
 			    				if (arr[0][j]=='X' && arr[1][j]=='X' && arr[2][j]=='X')
@@ -92,6 +95,7 @@ public class TicTacToe {
 			    				}
 			    					
 			    			}	
+			    			//check Diagonal
 			    			if(arr[0][0]=='X' && arr[1][1]=='X' && arr[2][2]=='X') 
 							{
 								System.out.println("Player with symbol X win");
@@ -103,15 +107,18 @@ public class TicTacToe {
 										System.exit(0);
 							}
 			           }
-			            
+			           
+					  // player 2 move
 					  else
 			          {    
+						    //if the index already has been used
 			                if( arr[i][j]=='X' || arr[i][j]=='O') 
 			                {
 			                		System.out.println("Error");
 			                		System.exit(0);
 			                }
-			                	 
+			                
+			                // put the symbol in the index and change the turn	 
 							else 
 						    {
 									 
@@ -119,7 +126,8 @@ public class TicTacToe {
 									 turn = 'X';
 							}
 								 
-							//ً Who is the winner
+							//ً The winner is O
+			                //check by rawً
 							for(i =0;i<=2;i++) 
 							{
 										
@@ -130,7 +138,7 @@ public class TicTacToe {
 											
 								}
 							}
-									
+							//check by col	
 							for(j =0;j<=2;j++) 
 							{
 										
@@ -140,6 +148,7 @@ public class TicTacToe {
 										System.exit(0);
 								}
 							}	
+							//check Diagonal
 							if(arr[0][0]=='O' && arr[1][1]=='O' && arr[2][2]=='O') 
 							{
 										System.out.println("Player with symbol O win");
