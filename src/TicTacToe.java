@@ -24,45 +24,42 @@ public class TicTacToe {
 		Scanner input = new Scanner(System.in);
 		boolean player1 = true;
 		boolean gamestart = true;
-		int count=1;
+		int count = 1;
 		int row;
 		int col;
 
 		System.out.println("Wellcome to Tic-Tac-Toe Program");
 
 		while (gamestart) {
-			
+
 			if (count <= 9) {
-				gamestart=true;
-			}
-			else {
-				gamestart=false;
+				gamestart = true;
+			} else {
+				gamestart = false;
 				System.err.println("drow");
 			}
-			
-			display(arr); //show the board
+
+			display(arr); // show the board
 			// play one move
 			if (player1) {
 				System.out.println("player 1 Make a move, Enter a position: ");
 				System.out.println("-------------------");
-				int position = input.nextInt(); 
+				int position = input.nextInt();
 
-				if (position <= 3) // first row 1 2 3  
-					{
+				if (position <= 3) // first row 1 2 3
+				{
 					row = 0;
 					col = position - 1;
 
-					
-					
-				    if (arr[row][col] == 'X' || arr[row][col] == 'O') {
+					if (arr[row][col] == 'X' || arr[row][col] == 'O') {
 						System.out.println("position not available");
 						player1 = true;
 
 					} else {
 						arr[row][col] = 'X';
 
-						//check the winner
-						//check the row
+						// check the winner
+						// check the row
 						for (int i = 0; i <= 2; i++) {
 							if (arr[i][0] == 'X' && arr[i][1] == 'X' && arr[i][2] == 'X') {
 								System.out.println("Player with symbol X win");
@@ -92,20 +89,18 @@ public class TicTacToe {
 					}
 
 				} else if (position <= 6) // second row 4 5 6
-					{
+				{
 					row = 1;
 					col = position - 4;
 
-					
-					
-				    if (arr[row][col] == 'X' || arr[row][col] == 'O') {
+					if (arr[row][col] == 'X' || arr[row][col] == 'O') {
 						System.out.println("position not available");
 						player1 = true;
 					} else {
 						arr[row][col] = 'X';
 
-						//check the winner
-						//check the row
+						// check the winner
+						// check the row
 						for (int i = 0; i <= 2; i++) {
 							if (arr[i][0] == 'X' && arr[i][1] == 'X' && arr[i][2] == 'X') {
 								System.out.println("Player with symbol X win");
@@ -138,20 +133,19 @@ public class TicTacToe {
 
 					}
 
-				} else if (position <= 9) //third row 7 8 9
-					{
+				} else if (position <= 9) // third row 7 8 9
+				{
 					row = 2;
 					col = position - 7;
-					
 
-				    if (arr[row][col] == 'X' || arr[row][col] == 'O') {
+					if (arr[row][col] == 'X' || arr[row][col] == 'O') {
 						System.out.println("position not available");
 						player1 = true;
 					} else {
 						arr[row][col] = 'X';
-						
-						//check the winner
-						//check the row
+
+						// check the winner
+						// check the row
 						for (int i = 0; i <= 2; i++) {
 							if (arr[i][0] == 'X' && arr[i][1] == 'X' && arr[i][2] == 'X') {
 								System.out.println("Player with symbol X win");
@@ -187,28 +181,27 @@ public class TicTacToe {
 				}
 
 				System.out.println();
-				count ++;
+				count++;
 				player1 = false;
 			}
-			// play one move
+			// play two move
 			else {
 				System.out.println("player 2 Make a move, Enter a position: ");
 				System.out.println("-------------------");
 				int position = input.nextInt();
-				if (position <= 3)  //first row 1 2 3 
-					{
+				if (position <= 3) // first row 1 2 3
+				{
 					row = 0;
 					col = position - 1;
-					
 
-					 if (arr[row][col] == 'X' || arr[row][col] == 'O') {
+					if (arr[row][col] == 'X' || arr[row][col] == 'O') {
 						System.out.println("position not available");
 						player1 = false;
 					} else {
 						arr[row][col] = 'O';
 
-						//check the winner
-						//check the row
+						// check the winner
+						// check the row
 						for (int i = 0; i <= 2; i++) {
 							if (arr[i][0] == 'O' && arr[i][1] == 'O' && arr[i][2] == 'O') {
 								System.out.println("Player with symbol O win");
@@ -245,15 +238,15 @@ public class TicTacToe {
 				{
 					row = 1;
 					col = position - 4;
-					
-					 if (arr[row][col] == 'O' || arr[row][col] == 'X') {
+
+					if (arr[row][col] == 'O' || arr[row][col] == 'X') {
 						System.out.println("position not available");
 						player1 = false;
 					} else {
 						arr[row][col] = 'O';
 
-						//check the winner
-						//check the row
+						// check the winner
+						// check the row
 						for (int i = 0; i <= 2; i++) {
 							if (arr[i][0] == 'O' && arr[i][1] == 'O' && arr[i][2] == 'O') {
 								System.out.println("Player with symbol O win");
@@ -290,18 +283,15 @@ public class TicTacToe {
 				{
 					row = 2;
 					col = position - 7;
-					
-					
 
-					 if (arr[row][col] == 'X' || arr[row][col] == 'O') {
+					if (arr[row][col] == 'X' || arr[row][col] == 'O') {
 						System.out.println("position not available");
 						player1 = false;
-					}
-					else {
+					} else {
 						arr[row][col] = 'O';
-						
-						//check the winner
-						//check the row
+
+						// check the winner
+						// check the row
 						for (int i = 0; i <= 2; i++) {
 							if (arr[i][0] == 'O' && arr[i][1] == 'O' && arr[i][2] == 'O') {
 								System.out.println("Player with symbol O win");
@@ -310,7 +300,7 @@ public class TicTacToe {
 							}
 
 						}
-					
+
 						// check by col
 						for (int j = 0; j <= 2; j++) {
 							if (arr[0][j] == 'O' && arr[1][j] == 'O' && arr[2][j] == 'O') {
@@ -335,10 +325,9 @@ public class TicTacToe {
 
 					}
 
-				}player1 = true;
-				count ++;
-				
-				
+				}
+				player1 = true;
+				count++;
 
 			}
 
@@ -387,7 +376,5 @@ public class TicTacToe {
 		return 0;
 
 	}
-	
-	
 
 }
