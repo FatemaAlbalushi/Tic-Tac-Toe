@@ -22,17 +22,17 @@ public class TicTacToeMain {
 	char turn = 'X';
 	boolean player1 = true;
 	boolean gameover = false;
+	int rowIndex;
+	int colIndex;
 	
 	System.out.println("Wellcome to Tic-Tac-Toe Program");
 	
 	while (!gameover) 
 	{
 		
-		
-	
 		display(arr);
 		
-		while (true)
+		while (player1)
 		{
 			System.out.println("Player 1 Symbol: X");
 			System.out.println("Player 2 Symbol: O");
@@ -40,9 +40,17 @@ public class TicTacToeMain {
 			System.out.println("-------------------");
 			char position = input.next().charAt(0);
 			
+			
+			
 			if (position>9) 
 			{
-				System.out.println("");
+				System.out.println("Invalid Move");
+			}
+			else if (arr[][] != '1' || arr[i][j] != '2'|| arr[i][j] != '3'|| 
+					arr[i][j] != '4'|| arr[i][j] != '5'|| arr[i][j] != '6'
+					|| arr[i][j] != '7'|| arr[i][j] != '8'|| arr[i][j] != '9') 
+			{
+				System.out.println("position not available");
 			}
 			break;
 		}
