@@ -144,9 +144,9 @@ public class TicTacToeMain {
 		{
 			for(int j =0;j<arr[i].length; j++) 
 			{
-				if (arr[i][j]==1 && arr[i][j]==2 && arr[i][j]==3 &&
-						arr[i][j]==4 && arr[i][j]==5 && arr[i][j]==6 &&
-						arr[i][j]==7 && arr[i][j]==8 && arr[i][j]==9)
+				if (arr[i][j]!=1 && arr[i][j]!=2 && arr[i][j]!=3 &&
+						arr[i][j]!=4 && arr[i][j]!=5 && arr[i][j]!=6 &&
+						arr[i][j]!=7 && arr[i][j]!=8 && arr[i][j]!=9)
 				{
 					return false;
 				}
