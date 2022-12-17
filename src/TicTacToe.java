@@ -73,7 +73,7 @@ public class TicTacToe {
 						if (arr[0][0] == 'X' && arr[1][1] == 'X' && arr[2][2] == 'X') {
 							System.out.println("Player with symbol X win");
 							gamestart = false;
-							;
+
 						}
 						if (arr[0][2] == 'X' && arr[1][1] == 'X' && arr[2][0] == 'X') {
 							System.out.println("Player with symbol X win");
@@ -218,7 +218,7 @@ public class TicTacToe {
 							System.out.println("Player with symbol O win");
 							Display(arr);
 							gamestart = false;
-							;
+
 						}
 						if (arr[0][2] == 'O' && arr[1][1] == 'O' && arr[2][0] == 'O') {
 							System.out.println("Player with symbol O win");
@@ -347,30 +347,28 @@ public class TicTacToe {
 	public static char Iswin(char[][] arr, char symbol) {
 		// check for rows
 		for (int i = 0; i <= 2; i++) {
-			if (arr[i][0] == arr[i][1] && arr[i][1] == arr[i][2] && arr[i][0]==symbol) {
-				return arr[i][0];
+			if (arr[i][0] == arr[i][1] && arr[i][1] == arr[i][2] && arr[i][0] == symbol) {
+				return symbol;
 			}
 
 		}
 		// check for rows
 		for (int j = 0; j <= 2; j++) {
-			if (arr[0][j] == arr[1][j] && arr[1][j] == arr[2][j] && arr[0][j]==symbol) {
+			if (arr[0][j] == arr[1][j] && arr[1][j] == arr[2][j] && arr[0][j] == symbol) {
 				return symbol;
 			}
 
 		}
-		if (arr[0][0] == arr[1][1] && arr[1][1] == arr[2][2] && arr[0][0]==symbol) {
+		if (arr[0][0] == arr[1][1] && arr[1][1] == arr[2][2] && arr[0][0] == symbol) {
 
 			return symbol;
 		}
-		if (arr[0][2] == arr[1][1] && arr[1][1] == arr[2][0] && arr[0][2]==symbol) {
+		if (arr[0][2] == arr[1][1] && arr[1][1] == arr[2][0] && arr[0][2] == symbol) {
 
 			return symbol;
 		}
 		return 0;
 
 	}
-	
-	
 
 }
